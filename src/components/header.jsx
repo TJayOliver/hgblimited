@@ -109,7 +109,7 @@ export const Header = ({ myElementIsVisible }) => {
         {/* Hamburger icon */}
         <button
           onClick={() => setOpen(!open)}
-          className="text-3xl text-black p-2 focus:outline-none cursor-pointer"
+          className="text-3xl text-black relative z-50 p-2 focus:outline-none cursor-pointer"
           aria-label="Toggle menu"
         >
           {open ? <FaTimes /> : <FaBars />}
@@ -117,18 +117,21 @@ export const Header = ({ myElementIsVisible }) => {
 
         {/* Menu drawer */}
         {open && (
-          <div className="fixed left-0 h-[100vh] w-full bg-white shadow-md z-50 p-12 -motion-translate-x-in-100">
+          <div className="fixed left-0 top-0 h-[100vh] w-full bg-white shadow-md z-20 p-12 -motion-translate-x-in-100">
             <nav className="flex flex-col items-center text-3xl justify-between gap-10 py-8 font-medium ">
-              <a to="/" className=" text-gray-800 hover:text-gray-600">
+              <a href="/" className=" text-gray-800 hover:text-gray-600">
                 Home
               </a>
-              <a to="/about" className=" text-gray-800 hover:text-gray-600">
+              <a href="/about" className=" text-gray-800 hover:text-gray-600">
                 Who We Are
               </a>
-              <a to="/services" className=" text-gray-800 hover:text-gray-600">
+              <a
+                href="/services"
+                className=" text-gray-800 hover:text-gray-600"
+              >
                 Services
               </a>
-              <a to="/contact" className=" text-gray-800 hover:text-gray-600">
+              <a href="/contact" className=" text-gray-800 hover:text-gray-600">
                 Our Contact
               </a>
             </nav>
@@ -138,16 +141,19 @@ export const Header = ({ myElementIsVisible }) => {
         {!open && (
           <div className="fixed left-0 h-[100vh] w-full bg-white shadow-md z-50 p-12 motion-translate-x-out-100">
             <nav className="flex flex-col items-center text-3xl justify-between gap-10 py-8 font-medium ">
-              <a to="/" className=" text-gray-800 hover:text-gray-600">
+              <a href="/" className=" text-gray-800 hover:text-gray-600">
                 Home
               </a>
-              <a to="/about" className=" text-gray-800 hover:text-gray-600">
+              <a href="/about" className=" text-gray-800 hover:text-gray-600">
                 Who We Are
               </a>
-              <a to="/services" className=" text-gray-800 hover:text-gray-600">
+              <a
+                href="/services"
+                className=" text-gray-800 hover:text-gray-600"
+              >
                 Services
               </a>
-              <a to="/Contact" className=" text-gray-800 hover:text-gray-600">
+              <a href="/Contact" className=" text-gray-800 hover:text-gray-600">
                 Our Contact
               </a>
             </nav>
@@ -276,16 +282,19 @@ export const HeaderForServices = ({ myElementIsVisible }) => {
         {open && (
           <div className="fixed left-0 top-0 h-[100vh] w-full bg-white shadow-md z-20 p-12 -motion-translate-x-in-100">
             <nav className="flex flex-col items-center text-3xl justify-between gap-10 py-8 font-medium ">
-              <a to="/" className=" text-gray-800 hover:text-gray-600">
+              <a href="/" className=" text-gray-800 hover:text-gray-600">
                 Home
               </a>
-              <a to="/about" className=" text-gray-800 hover:text-gray-600">
+              <a href="/about" className=" text-gray-800 hover:text-gray-600">
                 Who We Are
               </a>
-              <a to="/services" className=" text-gray-800 hover:text-gray-600">
+              <a
+                href="/services"
+                className=" text-gray-800 hover:text-gray-600"
+              >
                 Services
               </a>
-              <a to="/contact" className=" text-gray-800 hover:text-gray-600">
+              <a href="/contact" className=" text-gray-800 hover:text-gray-600">
                 Contact Us
               </a>
             </nav>
