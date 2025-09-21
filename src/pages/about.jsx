@@ -3,7 +3,7 @@ import { Header } from "../components/header.jsx";
 import { GiBrickWall } from "react-icons/gi";
 import { HiLightBulb } from "react-icons/hi2";
 import { Footer } from "../components/footer.jsx";
-import hero from "../assets/servicehero/200.jpg";
+import hero from "../assets/hpics/flyer.jpg";
 import dedication from "../assets/hpics/100.jpg";
 import excellence from "../assets/hpics/300.jpg";
 import { ContactForm } from "../components/contactform.jsx";
