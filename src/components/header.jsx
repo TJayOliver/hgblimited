@@ -137,28 +137,6 @@ export const Header = ({ myElementIsVisible }) => {
             </nav>
           </div>
         )}
-
-        {!open && (
-          <div className="fixed left-0 h-[100vh] w-full bg-white shadow-md z-50 p-12 motion-translate-x-out-100">
-            <nav className="flex flex-col items-center text-3xl justify-between gap-10 py-8 font-medium ">
-              <a href="/" className=" text-gray-800 hover:text-gray-600">
-                Home
-              </a>
-              <a href="/about" className=" text-gray-800 hover:text-gray-600">
-                Who We Are
-              </a>
-              <a
-                href="/services"
-                className=" text-gray-800 hover:text-gray-600"
-              >
-                Services
-              </a>
-              <a href="/Contact" className=" text-gray-800 hover:text-gray-600">
-                Our Contact
-              </a>
-            </nav>
-          </div>
-        )}
       </div>
     </header>
   );
@@ -295,25 +273,6 @@ export const HeaderForServices = ({ myElementIsVisible }) => {
                 Services
               </a>
               <a href="/contact" className=" text-gray-800 hover:text-gray-600">
-                Contact Us
-              </a>
-            </nav>
-          </div>
-        )}
-
-        {!open && (
-          <div className="fixed left-0 top-0 h-[100vh] w-full bg-white shadow-md z-50 p-12 motion-translate-x-out-100 opacity-0">
-            <nav className="flex flex-col items-center text-3xl justify-between gap-10 py-8 font-medium ">
-              <a to="/" className=" text-gray-800 hover:text-gray-600">
-                Home
-              </a>
-              <a to="/about" className=" text-gray-800 hover:text-gray-600">
-                Who We Are
-              </a>
-              <a to="/services" className=" text-gray-800 hover:text-gray-600">
-                Services
-              </a>
-              <a to="/services" className=" text-gray-800 hover:text-gray-600">
                 Contact Us
               </a>
             </nav>
