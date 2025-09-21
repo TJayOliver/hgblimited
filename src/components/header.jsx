@@ -1,10 +1,30 @@
 import { FaLongArrowAltRight } from "react-icons/fa";
 import logo from "../assets/hpics/logo.jpg";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaFacebook } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 export const Header = ({ myElementIsVisible }) => {
+  const location = useLocation();
+  const segments = location.pathname.split("/").filter(Boolean);
+  const routeName = segments.length > 0 ? segments.pop() : "home";
+  const [homeLinkActive, setHomeLinkActive] = useState(false);
+  const [serviceLinkActive, setServiceLinkActive] = useState(false);
+  const [aboutLinkActive, setAboutLinkActive] = useState(false);
+
+  useEffect(() => {
+    if (routeName === "home") {
+      setHomeLinkActive(true);
+    }
+    if (routeName === "services") {
+      setServiceLinkActive(true);
+    }
+    if (routeName === "about") {
+      setAboutLinkActive(true);
+    }
+  }, [routeName]);
+
   const [open, setOpen] = useState(false);
   return (
     <header
@@ -21,32 +41,48 @@ export const Header = ({ myElementIsVisible }) => {
           <img src={logo} alt="HBL" className=" h-8 bg-center bg-cover" />
           <h1 className="font-bold">Hergis Bridge Company Limited</h1>
         </div>
+
         {/* site links */}
         <ul className="hidden md:flex justify-between items-center w-full max-w-lg font-medium">
           <li>
             <a
               href="/"
-              className="hover:text-amber-400 duration-100 transition-all ease-in"
+              className={
+                homeLinkActive
+                  ? "hover:text-amber-400 text-amber-600 duration-100 transition-all ease-in"
+                  : "hover:text-amber-400 duration-100 transition-all ease-in"
+              }
             >
               Home
             </a>
           </li>
+
           <li>
             <a
               href="/about"
-              className="hover:text-amber-400 duration-100 transition-all ease-in"
+              className={
+                aboutLinkActive
+                  ? "hover:text-amber-400 text-amber-600 duration-100 transition-all ease-in"
+                  : "hover:text-amber-400 duration-100 transition-all ease-in"
+              }
             >
               Who We Are
             </a>
           </li>
+
           <li>
             <a
               href="/services"
-              className="hover:text-amber-400 duration-100 transition-all ease-in"
+              className={
+                serviceLinkActive
+                  ? "hover:text-amber-400 text-amber-600 duration-100 transition-all ease-in"
+                  : "hover:text-amber-400 duration-100 transition-all ease-in"
+              }
             >
               Our Services
             </a>
           </li>
+
           <li>
             <a
               href="https://www.facebook.com/profile.php?id=61576540560890#"
@@ -58,9 +94,10 @@ export const Header = ({ myElementIsVisible }) => {
             </a>
           </li>
         </ul>
+
         <a
           href="/contact"
-          className=" hidden text-xs md:text-xl md:flex items-center bg-blue-500 p-1 md:p-2 rounded-3xl font-medium gap-2 text-white"
+          className="hidden whitespace-nowrap p-2 md:flex items-center bg-blue-500 rounded-3xl font-medium gap-2 text-white"
         >
           <small>Contact Us</small>
           <FaLongArrowAltRight className=" hover:motion-translate-x-in-25" />
@@ -122,6 +159,24 @@ export const Header = ({ myElementIsVisible }) => {
 };
 
 export const HeaderForServices = ({ myElementIsVisible }) => {
+  const location = useLocation();
+  const routeName = location.pathname.split("/").filter(Boolean).pop();
+  const [homeLinkActive, setHomeLinkActive] = useState(false);
+  const [serviceLinkActive, setServiceLinkActive] = useState(false);
+  const [aboutLinkActive, setAboutLinkActive] = useState(false);
+
+  useEffect(() => {
+    if (routeName === "/") {
+      setHomeLinkActive(true);
+    }
+    if (routeName === "services") {
+      setServiceLinkActive(true);
+    }
+    if (routeName === "about") {
+      setAboutLinkActive(true);
+    }
+  }, [routeName]);
+
   const [open, setOpen] = useState(false);
   return (
     <header
@@ -143,27 +198,42 @@ export const HeaderForServices = ({ myElementIsVisible }) => {
           <li>
             <a
               href="/"
-              className="hover:text-amber-200 duration-100 transition-all ease-in"
+              className={
+                homeLinkActive
+                  ? "hover:text-amber-50 text-blue-600 duration-100 transition-all ease-in"
+                  : "hover:text-blue-600 duration-100 transition-all ease-in"
+              }
             >
               Home
             </a>
           </li>
+
           <li>
             <a
               href="/about"
-              className="hover:text-amber-200 duration-100 transition-all ease-in"
+              className={
+                aboutLinkActive
+                  ? "hover:text-amber-50 text-blue-600 duration-100 transition-all ease-in"
+                  : "hover:text-blue-600 duration-100 transition-all ease-in"
+              }
             >
               Who We Are
             </a>
           </li>
+
           <li>
             <a
               href="/services"
-              className="hover:text-amber-200 duration-100 transition-all ease-in"
+              className={
+                serviceLinkActive
+                  ? "hover:text-amber-400 text-amber-300 duration-100 transition-all ease-in"
+                  : "hover:text-amber-400 duration-100 transition-all ease-in"
+              }
             >
               Our Services
             </a>
           </li>
+
           <li>
             <a
               href="https://www.facebook.com/profile.php?id=61576540560890#"
@@ -178,7 +248,7 @@ export const HeaderForServices = ({ myElementIsVisible }) => {
 
         <a
           href="/contact"
-          className="hidden text-xs md:text-xl md:flex items-center bg-blue-500 p-1 md:p-2 rounded-3xl font-medium gap-2 text-white"
+          className="hidden whitespace-nowrap p-2 md:flex items-center bg-blue-500 rounded-3xl font-medium gap-2 text-white"
         >
           <small>Contact Us</small>
           <FaLongArrowAltRight />

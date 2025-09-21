@@ -59,12 +59,13 @@ export const ImageSlides = () => {
         >
           <BsChevronCompactRight />
         </div>
+
         {/* yellow box and white */}
         <div className="hidden md:flex items-center justify-center absolute -top-14 -translate-x-2/4 left-2/4 gap-4">
           {/* yellow */}
           <div className="bg-yellow-200 md:h-56 w-80 p-8 justify-left gap-4 flex flex-col font-medium tracking-wide ">
             <div className="flex justify-between ">
-              <h2 class="text-xl font-bold text-black items-center">
+              <h2 className="text-xl font-bold text-black items-center">
                 Built on Excellence
               </h2>
               <FiArrowUpRight size={30} />
@@ -79,7 +80,7 @@ export const ImageSlides = () => {
           {/* white */}
           <div className="bg-white text-black md:h-56 w-80 p-8 justify-left gap-4 flex flex-col font-medium tracking-wide ">
             <div className="flex justify-between ">
-              <h2 class="text-xl font-bold items-center">
+              <h2 className="text-xl font-bold items-center">
                 Values That Inspires
               </h2>
               <FiArrowUpRight size={30} />

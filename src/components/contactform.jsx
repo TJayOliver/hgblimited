@@ -24,11 +24,9 @@ export const ContactForm = () => {
           publicKey: publickey,
         }
       );
-      console.log("SUCCESS!", result.text);
       alert("✅ Message sent successfully!");
       form.current.reset();
     } catch (error) {
-      console.error("FAILED...", error.text);
       alert("❌ Failed to send message. Please try again later.");
     }
 

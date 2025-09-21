@@ -3,7 +3,7 @@ import { Footer } from "../components/footer.jsx";
 import hero from "../assets/servicehero/100.jpg";
 import { AllServicesCard } from "../components/allServicesCard.jsx";
 import { list } from "../lib/listofservices.js";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, act } from "react";
 import { ContactForm } from "../components/contactform.jsx";
 import { SEO } from "../components/seo.jsx";
 
@@ -57,10 +57,10 @@ const Services = () => {
         {/* services */}
         <section className="p-14">
           <h2 className="font-bold text-md tracking-widest">SERVICES</h2>
-          <p className="text-3xl font-medium">
+          <p className="text-3xl font-medium p-2">
             Hergis Bridge is Your One-Stop Solution for Building Dreams
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-5 md:gap-6 place-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 place-items-center">
             {list.map((service) => (
               <AllServicesCard
                 key={service.id}

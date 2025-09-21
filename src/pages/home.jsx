@@ -117,22 +117,24 @@ const Home = () => {
         </section>
 
         {/* why choose us */}
-        <section class="p-8 h-auto md:h-[30rem] flex flex-col items-center justify-center">
-          <div class="max-w-5xl mx-auto text-center gap-4 flex justify-between flex-col">
-            <h2 class="md:text-3xl font-bold text-black mb-6">Why Choose Us</h2>
-            <p class="text-lg text-gray-700 mb-10">
+        <section className="p-8 h-auto md:h-[30rem] flex flex-col items-center justify-center">
+          <div className="max-w-5xl mx-auto text-center gap-4 flex justify-between flex-col">
+            <h2 className="md:text-3xl font-bold text-black mb-6">
+              Why Choose Us
+            </h2>
+            <p className="text-lg text-gray-700 mb-10">
               We go beyond delivering projects, we build lasting trust. From
               large-scale infrastructure to everyday services, our work is
               guided by precision, integrity and a dedication to exceed
               expectations.
             </p>
 
-            <div class="grid gap-8 md:grid-cols-3 text-left">
-              <div class="p-6 bg-white shadow rounded-xl">
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            <div className="grid gap-8 md:grid-cols-3 text-left">
+              <div className="p-6 bg-white shadow rounded-xl">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   Multi-Sector Expertise
                 </h3>
-                <p class="text-gray-700">
+                <p className="text-gray-700">
                   From construction and real estate development to farming,
                   vehicle sales and technology installations, our diverse
                   capabilities mean you can rely on a single trusted partner for
@@ -140,22 +142,22 @@ const Home = () => {
                 </p>
               </div>
 
-              <div class="p-6 bg-white shadow rounded-xl">
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <div className="p-6 bg-white shadow rounded-xl">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   Innovation & Reliability
                 </h3>
-                <p class="text-gray-700">
+                <p className="text-gray-700">
                   Combining modern technology with years of experience, we
                   consistently bring creative solutions and dependable results
                   no matter the size or complexity.
                 </p>
               </div>
 
-              <div class="p-6 bg-white shadow rounded-xl">
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              <div className="p-6 bg-white shadow rounded-xl">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   Proven Track Record
                 </h3>
-                <p class="text-gray-700">
+                <p className="text-gray-700">
                   Our portfolio showcases successful projects across Ghana and
                   beyond, earning us a reputation for excellence and
                   reliability.
