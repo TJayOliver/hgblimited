@@ -1,20 +1,25 @@
 const date = new Date().getFullYear();
 
-export const Footer = ({ color, textColor }) => {
+export const Footer = ({ color, textColor, headerColor }) => {
   return (
     <footer
-      className={`${color} ${textColor} p-8 h-auto flex-col justify-center gap-4 md:gap-0 flex`}
+      className={`${color} ${textColor}  p-8 h-auto flex-col justify-center gap-4 md:gap-0 flex`}
     >
-      <h2 className="text-xl md:text-3xl font-bold">
+      <h2 className={`text-xl md:text-3xl font-bold ${headerColor}`}>
         Bringing Your Dreams to Reality.
       </h2>
       <section className="flex flex-col md:flex md:flex-row gap-8 md:gap-0  justify-between w-full  md:p-8">
         {/* navigation */}
         <div className="flex flex-col gap-4">
-          <a>Who We Are</a>
-          <a>Our Project</a>
-          <a>Our Services</a>
-          <a>Contact Us</a>
+          <a href="/about" className="hover:text-amber-400">
+            Who We Are
+          </a>
+          <a href="/contact" className="hover:text-amber-400">
+            Contact Us
+          </a>
+          <a href="/services" className="hover:text-amber-400">
+            Our Services
+          </a>
         </div>
 
         {/* address */}
@@ -31,7 +36,7 @@ export const Footer = ({ color, textColor }) => {
 
         {/* company */}
         <div className="flex flex-col md:w-96 gap-4">
-          <p className="font-bold text-2xl">Hergis Bridge</p>
+          <p className={`font-bold text-2xl ${headerColor}`}>Hergis Bridge</p>
           <p>
             Our Company is a leading civil engineering construction company that
             builds and delivers exceptional infrastructure projects.

@@ -168,7 +168,11 @@ const Home = () => {
         </section>
       </main>
 
-      <Footer color={"bg-gray-900"} textColor={"text-white/90"} />
+      <Footer
+        color={"bg-gray-900"}
+        textColor={"text-white/90"}
+        headerColor={"text-yellow-200"}
+      />
     </>
   );
 };
